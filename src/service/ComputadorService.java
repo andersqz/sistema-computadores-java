@@ -1,32 +1,25 @@
 package service;
 
-import exceptions.InvalidCustoBaseException;
 import model.Desktop;
 import model.Notebook;
+import repository.ComputadorRepository;
 import util.Util;
 import model.Computador;
 
 public class ComputadorService {
 	
 
-	public static Boolean validaDados(Computador comp) {
+	public static void validaDados(Computador comp) {
 
-		try {
-			if (comp instanceof Desktop)
-				Util.validaDesktop((Desktop) comp);
-			else if (comp instanceof Notebook)
-				Util.validaNotebook((Notebook) comp);
-			return true;
+		if (comp instanceof Desktop) {
 
-		} catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
-
-		} catch (InvalidCustoBaseException e) {
-			System.out.println(e.getMessage());
-
-		} catch (Exception e) {
-			e.printStackTrace();
+			Util.validaDesktop((Desktop) comp);
+			ComputadorRepository.saveDesktop((Desktop) comp);
 		}
-		return false;
+		else if (comp instanceof Notebook) {
+			
+			Util.validaNotebook((Notebook) comp);
+			ComputadorRepository.saveNotebook((Notebook) comp);
+		}
 	}
 }

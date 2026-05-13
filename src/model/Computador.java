@@ -36,8 +36,9 @@ public class Computador {
     }
 
     public void setNumeroSerie(Integer value) {
-        if (value <= 4 || value > 9)
-            throw new IllegalArgumentException("O número de série deve ser entre 4-9 digitos.");
+        String s = String.valueOf(value);
+        if (s.length() > 9)
+            throw new IllegalArgumentException("O número de série tem 9 digitos.");
         this.numeroSerie = value;
     }
 
