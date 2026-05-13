@@ -22,7 +22,11 @@ public class Notebook extends Computador {
     @Override 
     public String toString() {
 
-        return "Tipo: Notebook | Modelo: " + getModelo() + " | Numero de serie: " + getNumeroSerie() + " | Custo base: " + getCustoBase() + " | Peso: " + getPeso() + " | Custo Adicional: " + getCustoAdicional();
+        return "Tipo: Notebook | Modelo: " + getModelo() + 
+        " | Numero de serie: " + getNumeroSerie() + 
+        " | Custo base: " + getCustoBase() + 
+        " | Peso: " + getPeso() + 
+        " | Custo Adicional: " + getCustoAdicional();
     }
 
     @Override

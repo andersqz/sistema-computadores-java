@@ -1,6 +1,5 @@
 package model;
 
-import exceptions.InvalidCustoBaseException;
 import util.Util;
 
 public class Desktop extends Computador {
@@ -30,7 +29,11 @@ public class Desktop extends Computador {
 
 	@Override
 	public String toString() {
-        return "Tipo: Desktop | Modelo: " + getModelo() + " | Numero de serie: " + getNumeroSerie() + " | Custo base: " + getCustoBase() + " | Numero componentes: " + getNumeroComponentes() + " | Custo Adicional: " + getCustoAdicional();
+        return "Tipo: Desktop | Modelo: " + getModelo() + 
+		" | Numero de serie: " + getNumeroSerie() + 
+		" | Custo base: " + getCustoBase() + 
+		" | Numero componentes: " + getNumeroComponentes() + 
+		" | Custo Adicional: " + getCustoAdicional();
 
 	}
     

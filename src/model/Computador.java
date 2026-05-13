@@ -54,17 +54,5 @@ public abstract class Computador {
         this.custoAdicional = value;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Computador{");
-        sb.append("modelo=").append(modelo);
-        sb.append(", numeroSerie=").append(numeroSerie);
-        sb.append(", custoBase=").append(custoBase);
-        sb.append(", custoAdicional=").append(custoAdicional);
-        sb.append('}');
-        return sb.toString();
-    }
-
     public abstract void valida();
 }
