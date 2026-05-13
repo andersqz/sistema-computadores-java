@@ -3,7 +3,6 @@ package service;
 import model.Desktop;
 import model.Notebook;
 import repository.ComputadorRepository;
-import util.Util;
 import model.Computador;
 
 public class ComputadorService {
@@ -13,12 +12,12 @@ public class ComputadorService {
 
 		if (comp instanceof Desktop) {
 
-			Util.validaDesktop((Desktop) comp);
+			ComputadorValidator.validaDesktop((Desktop) comp);
 			ComputadorRepository.save((Desktop) comp);
 		}
 		else if (comp instanceof Notebook) {
 			
-			Util.validaNotebook((Notebook) comp);
+			ComputadorValidator.validaNotebook((Notebook) comp);
 			ComputadorRepository.save((Notebook) comp);
 		}
 	}
