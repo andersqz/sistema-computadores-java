@@ -3,6 +3,7 @@ package util;
 import exceptions.InvalidCustoBaseException;
 import model.Desktop;
 import model.Notebook;
+import repository.ComputadorRepository;
 
 public class Util {
     
@@ -36,6 +37,23 @@ public class Util {
             	throw new IllegalArgumentException("Peso deve ser maior que 0kg e menor que 10kg");
         	return true;
     	}
+
+		public static void validaDesktop(Desktop pc) throws InvalidCustoBaseException {
+	        
+		Util.validaModelo(pc);
+		Util.validaCustoBase(pc);
+		Util.validaQuantidadeComponentes(pc);
+
+		ComputadorRepository.saveDesktop(pc);
+	 }
+
+	 	public static void validaNotebook(Notebook note) throws InvalidCustoBaseException {
+
+        Util.validaNumeroSerie(note);
+    	Util.validaPeso(note);
+
+        ComputadorRepository.saveNotebook(note);
+    }
     
 }
 
@@ -71,4 +89,23 @@ class Validadores {
             	throw new IllegalArgumentException("Peso deve ser maior que 0kg e menor que 10kg");
         	return true;
     	}
+
+		public static void validaNotebook(Notebook note) throws InvalidCustoBaseException {
+
+			Util.validaNumeroSerie(note);
+			Util.validaPeso(note);
+
+			ComputadorRepository.saveNotebook(note);
+    	}
+
+
+		public static void validaDesktop(Desktop pc) throws InvalidCustoBaseException {
+				
+			Util.validaModelo(pc);
+			Util.validaCustoBase(pc);
+			Util.validaQuantidadeComponentes(pc);
+
+			ComputadorRepository.saveDesktop(pc);
+	 	}
+
 }	

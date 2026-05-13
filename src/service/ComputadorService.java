@@ -3,7 +3,6 @@ package service;
 import exceptions.InvalidCustoBaseException;
 import model.Desktop;
 import model.Notebook;
-import repository.ComputadorRepository;
 import util.Util;
 import model.Computador;
 
@@ -14,9 +13,9 @@ public class ComputadorService {
 
 		try {
 			if (comp instanceof Desktop)
-				validaDesktop((Desktop) comp);
+				Util.validaDesktop((Desktop) comp);
 			else if (comp instanceof Notebook)
-				validaNotebook((Notebook) comp);
+				Util.validaNotebook((Notebook) comp);
 			return true;
 
 		} catch (IllegalArgumentException e) {
@@ -30,24 +29,4 @@ public class ComputadorService {
 		}
 		return false;
 	}
-
-
-
-
-	 public static void validaDesktop(Desktop pc) throws InvalidCustoBaseException {
-	        
-		Util.validaModelo(pc);
-		Util.validaCustoBase(pc);
-		Util.validaQuantidadeComponentes(pc);
-
-		ComputadorRepository.saveDesktop(pc);
-	 }
-
-	public static void validaNotebook(Notebook note) throws InvalidCustoBaseException {
-
-        Util.validaNumeroSerie(note);
-    	Util.validaPeso(note);
-
-        ComputadorRepository.saveNotebook(note);
-    }
 }

@@ -5,7 +5,6 @@ import java.util.Scanner;
 import exceptions.InvalidCustoBaseException;
 import model.Notebook;
 import repository.ComputadorRepository;
-import model.Computador;
 import model.Desktop;
 import service.ComputadorService;
 
@@ -116,5 +115,6 @@ public class Program {
                     break;
             }
         } while (opcao != '4');
+        sc.close();
     }
 }
