@@ -14,12 +14,12 @@ public class ComputadorService {
 		if (comp instanceof Desktop) {
 
 			Util.validaDesktop((Desktop) comp);
-			ComputadorRepository.saveDesktop((Desktop) comp);
+			ComputadorRepository.save((Desktop) comp);
 		}
 		else if (comp instanceof Notebook) {
 			
 			Util.validaNotebook((Notebook) comp);
-			ComputadorRepository.saveNotebook((Notebook) comp);
+			ComputadorRepository.save((Notebook) comp);
 		}
 	}
 }
