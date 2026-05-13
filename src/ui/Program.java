@@ -1,5 +1,6 @@
 package ui;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import exceptions.InvalidCustoBaseException;
@@ -59,9 +60,12 @@ public class Program {
                 	} catch (InvalidCustoBaseException e) {
                     	System.out.println(e.getMessage());
                     	
-                	} catch (Exception e) {
+                	} catch (InputMismatchException e) {
                 		System.out.println(e.getMessage());
-                	}                 
+
+                	} catch (Exception e) {
+                        e.printStackTrace();
+                    }       
                     break;
 
                 case '2':
@@ -95,10 +99,12 @@ public class Program {
                     } catch (InvalidCustoBaseException e) {
                     	System.out.println(e.getMessage());
                     	
-                    } catch (Exception e) {
+                    } catch (InputMismatchException e) {
                     	System.out.println(e.getMessage());
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                    
                     break;
 
                 case '3':

@@ -43,5 +43,6 @@ public class Desktop extends Computador {
 		Util.validaModelo(this);
 		Util.validaCustoBase(this);
 		Util.validaQuantidadeComponentes(this);
+		Util.validaNumeroSerie(this);
 	}
 }

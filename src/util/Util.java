@@ -47,8 +47,8 @@ public class Util {
 	 */
 	public static Boolean validaNumeroSerie(Computador note) {
 		String s = String.valueOf(note.getNumeroSerie());
-		if (s.length() < 9 || s.length() > 9)
-			throw new IllegalArgumentException("Numero de serie deve ter 9 digitos.");
+		if (s.length() != 9)
+			throw new IllegalArgumentException("Numero de serie deve ter exatamente 9 digitos.");
 		return true;
 	}
 
