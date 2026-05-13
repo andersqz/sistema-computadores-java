@@ -1,6 +1,6 @@
 package model;
 
-public class Computador {
+public abstract class Computador {
 
     private String modelo;
     private Integer numeroSerie;
@@ -65,4 +65,6 @@ public class Computador {
         sb.append('}');
         return sb.toString();
     }
+
+    public abstract void valida();
 }

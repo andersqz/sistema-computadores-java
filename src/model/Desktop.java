@@ -1,5 +1,8 @@
 package model;
 
+import exceptions.InvalidCustoBaseException;
+import util.Util;
+
 public class Desktop extends Computador {
 	
 	private Integer numeroComponentes;
@@ -31,5 +34,11 @@ public class Desktop extends Computador {
 
 	}
     
-    
+    @Override
+	public void valida() {
+	        
+		Util.validaModelo(this);
+		Util.validaCustoBase(this);
+		Util.validaQuantidadeComponentes(this);
+	}
 }

@@ -1,4 +1,5 @@
 package model;
+import util.Util;
 
 public class Notebook extends Computador {
 
@@ -22,5 +23,14 @@ public class Notebook extends Computador {
     public String toString() {
 
         return "Tipo: Notebook | Modelo: " + getModelo() + " | Numero de serie: " + getNumeroSerie() + " | Custo base: " + getCustoBase() + " | Peso: " + getPeso() + " | Custo Adicional: " + getCustoAdicional();
+    }
+
+    @Override
+    public void valida() {
+			
+        Util.validaModelo(this);
+        Util.validaCustoBase(this);
+        Util.validaNumeroSerie(this);
+        Util.validaPeso(this);
     }
 }
