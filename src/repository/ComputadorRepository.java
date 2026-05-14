@@ -13,6 +13,11 @@ public class ComputadorRepository {
     
     private static List<Computador> lista = new ArrayList<>();
 
+    /**
+     * método que recebe um objeto Computador como parametro e salva na lista de computadores,
+     * após, ele salva também no arquivo CSV
+     * @param comp
+     */
     public static void save(Computador comp) {
         lista.add(comp);
 

@@ -10,9 +10,12 @@ import repository.ComputadorRepository;
 import service.ComputadorService;
 
 public class ComputadorController {
-
+    
     private Scanner sc = new Scanner(System.in);
     
+    /**
+     * método 'principal'. Ele inicia o sistema chamado os métodos necessárias
+     */
     public void iniciar() {
         char opcao;
         do {
@@ -32,6 +35,9 @@ public class ComputadorController {
         } while (opcao != '4');
     }
 
+    /**
+     * método que exibe o menu principal na tela para o usuário decidir o que fazer
+     */
     private void exibeMenu() {
             System.out.println("\nSISTEMA");
             System.out.println("1 - CADASTRAR PC DE MESA");
@@ -41,6 +47,10 @@ public class ComputadorController {
             System.out.print("Opção: ");
     }
 
+    /**
+     * método que solicita os dados do DESKTOP para o usuário e retorna um objeto Desktop com os dados informados por ele
+     * @return obj Desktop
+     */
     private Desktop leDesktop() {
         System.out.print("Modelo: ");
         String modelo = sc.nextLine();
@@ -60,6 +70,10 @@ public class ComputadorController {
         return new Desktop(modelo, numeroSerie, custoBase, numeroComponentes);
     }
 
+    /**
+     * método que valida os dados informados pelo usuario do objeto Desktop, e cadastra o objeto na lista e no arquivo CSV, 
+     * caso encontre algum erro de entrada do usuário, lança excessão 
+     */
     private void cadastraDesktop() {
 
         try {
@@ -79,6 +93,10 @@ public class ComputadorController {
         }   
     }
 
+    /**
+     * método que solicita os dados para preenchimento do usuario do objeto Notebook, retorna um objeto Notebook
+     * @return Obj Notebook
+     */
     private Notebook leNotebook() {
         System.out.print("Modelo: ");
         String modelo = sc.nextLine();
@@ -98,6 +116,10 @@ public class ComputadorController {
         return new Notebook(modelo, numeroSerie, custoBase, peso);
     }
 
+    /**
+     * método que valida os dados informados pelo usuario do objeto Notebook e se tudo certo, cadastra o objeto na lista e no arquivo CSV,
+     * caso de algum erro de input do usuário, lança excessão
+     */
     private void cadastraNotebook() {
 
         try {
