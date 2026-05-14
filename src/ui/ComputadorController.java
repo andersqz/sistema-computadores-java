@@ -18,6 +18,7 @@ public class ComputadorController {
         do {
             exibeMenu();
             opcao = sc.next().charAt(0);
+            sc.nextLine();
 
             switch (opcao) {
 
@@ -72,7 +73,7 @@ public class ComputadorController {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
             sc.nextLine();
-            System.out.println(e.getMessage());
+            System.out.println("Entrada inválida! Digite um número.");
         } catch (Exception e) {
             e.printStackTrace();
         }   
@@ -113,7 +114,7 @@ public class ComputadorController {
             
         } catch (InputMismatchException e) {
             sc.nextLine();
-            System.out.println(e.getMessage());
+            System.out.println("Entrada inválida! Digite um número.");
 
         } catch (Exception e) {
             e.printStackTrace();
