@@ -37,4 +37,10 @@ public class Notebook extends Computador {
         Util.validaNumeroSerie(this);
         Util.validaPeso(this);
     }
+
+    @Override
+    public String toCsv() {
+            return "NOTEBOOK;" + getModelo() + ";" + getNumeroSerie() + ";" +
+           getCustoBase() + ";" + getCustoAdicional() + ";" + getPeso() + "Kg\n";
+    }
 }

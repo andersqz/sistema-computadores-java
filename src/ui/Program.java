@@ -37,7 +37,7 @@ public class Program {
 	                    System.out.print("Modelo: ");
 	                    String modelo = sc.nextLine();
 	
-	                    System.out.print("Numero de série (4 - 9 digitos): ");
+	                    System.out.print("Numero de série (9 digitos): ");
 	                    Integer numeroSerie = sc.nextInt();
 	                    sc.nextLine();
 	
@@ -76,7 +76,7 @@ public class Program {
                         System.out.print("Modelo: ");
                         String modelo = sc.nextLine();
 
-                        System.out.print("Numero de série (4 - 9 digitos): ");
+                        System.out.print("Numero de série (9 digitos): ");
                         Integer numeroSerie = sc.nextInt();
                         sc.nextLine();
 

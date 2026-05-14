@@ -55,4 +55,5 @@ public abstract class Computador {
     }
 
     public abstract void valida();
+    public abstract String toCsv();
 }

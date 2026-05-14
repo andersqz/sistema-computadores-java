@@ -45,4 +45,10 @@ public class Desktop extends Computador {
 		Util.validaQuantidadeComponentes(this);
 		Util.validaNumeroSerie(this);
 	}
+
+	@Override
+	public String toCsv() {
+		return "DESKTOP;" + getModelo() + ";" + getNumeroSerie() + ";" +
+           getCustoBase() + ";" + getCustoAdicional() + ";" + getNumeroComponentes() + "\n";
+	}
 }
