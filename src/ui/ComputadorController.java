@@ -91,7 +91,7 @@ public class ComputadorController {
         Double custoBase = sc.nextDouble();
         sc.nextLine();
 
-        System.out.println("Peso em kg: ");
+        System.out.print("Peso em kg: ");
         Double peso = sc.nextDouble();
         sc.nextLine();
 
