@@ -25,7 +25,7 @@ public class Notebook extends Computador {
         return "Tipo: Notebook | Modelo: " + getModelo() + 
         " | Numero de serie: " + getNumeroSerie() + 
         " | Custo base: " + getCustoBase() + 
-        " | Peso: " + getPeso() + 
+        " | Peso: " + getPeso() + "kg" +
         " | Custo Adicional: " + getCustoAdicional();
     }
 
@@ -41,6 +41,6 @@ public class Notebook extends Computador {
     @Override
     public String toCsv() {
             return "NOTEBOOK;" + getModelo() + ";" + getNumeroSerie() + ";" +
-           getCustoBase() + ";" + getCustoAdicional() + ";" + getPeso() + "Kg\n";
+           getCustoBase() + ";" + getCustoAdicional() + ";;" + getPeso() + "\n";
     }
 }

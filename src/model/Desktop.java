@@ -49,6 +49,6 @@ public class Desktop extends Computador {
 	@Override
 	public String toCsv() {
 		return "DESKTOP;" + getModelo() + ";" + getNumeroSerie() + ";" +
-           getCustoBase() + ";" + getCustoAdicional() + ";" + getNumeroComponentes() + "\n";
+           getCustoBase() + ";" + getCustoAdicional() + ";" + getNumeroComponentes() + ";\n";
 	}
 }
